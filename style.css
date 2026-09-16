@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topic {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(0, 14, 83);
+    color: white;
+    border: 1px solid #e0dcd8;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.05);
+    margin: 16px;
+    padding: 35px;
+    gap: 5px;
+}
+
+.navbar {
+    width: 100%;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(2, 2, 71);
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+.about,
+.hobby,
+.skill,
+.learning,
+.projects,
+.certifications,
+.goals,
+.subject {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about,
+.hobby,
+.skill,
+.learning,
+.projects,
+.certifications,
+.goals,
+.subject {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: 100%;
+    box-shadow: 1px 4px 7px rgba(0, 0, 0, 0.05);
+    margin: 25px;
+    padding: 25px;
+    border: 1px solid #e0dcd8;
+    border-radius: 20px;
+    transition: .4s ease;
+    cursor: pointer;
+}
+
+
+.subject h1:hover {
+    transition: transform 1s;
+    transform: rotate(10deg);
+}
+
+.hobby h1:hover {
+    transition: transform 1s;
+    transform: rotate(10deg);
+}
+
+.learning h1:hover {
+    transition: transform 1s;
+    transform: rotate(10deg);
+}
+
+.goals h1:hover {
+    transition: transform 1s;
+    transform: rotate(10deg);
+}
+
+.certifications h1:hover {
+    transition: transform 1s;
+    transform: rotate(10deg);
+}
+
+.skill h1:hover {
+    transition: transform 1s;
+    transform: rotate(10deg);
+}
+
+.projects h1:hover {
+    transition: transform 1s;
+    transform: rotate(10deg);
+}
+
+
+.about:hover {
+    transform: scale(1.06);
+}
+
+.subject:hover {
+    transform: scale(1.06);
+}
+
+.hobby:hover {
+    transform: scale(1.06);
+}
+
+.skill:hover {
+    transform: scale(1.06);
+}
+
+.learning:hover {
+    transform: scale(1.06);
+}
+
+.projects:hover {
+    transform: scale(1.06);
+}
+
+.certifications:hover {
+    transform: scale(1.06);
+}
+
+.goals:hover {
+    transform: scale(1.06);
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    box-shadow: -4px 0px 0px rgb(150, 5, 136);
+
+}
+
+#contactForm {
+    margin: 40px;
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(2, 2, 71);
+    color: white;
+}
+
+/* Responsive Design */
+
+@media (min-width: 992px) {
+    .topic {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 35px;
+    }
+
+    .about,
+    .hobby,
+    .skill,
+    .learning,
+    .projects,
+    .certifications,
+    .goals,
+    .subject {
+        width: 100%;
+        max-width: 1100px;
+        margin: 25px auto;
+        padding: 25px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .topic {
+        width: 95%;
+        margin: 15px auto;
+        padding: 30px 20px;
+    }
+
+    .about,
+    .hobby,
+    .skill,
+    .learning,
+    .projects,
+    .certifications,
+    .goals,
+    .subject {
+        width: 100%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px)and (min-width: 481) {
+    .topic {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+        padding: 25px 15px;
+    }
+
+    .about,
+    .hobby,
+    .skill,
+    .learning,
+    .projects,
+    .certifications,
+    .goals,
+    .subject {
+        width: 100%;
+        margin: 15px 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p,
+    li {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .topic {
+        width: calc(100% - 12px);
+        margin: 6px auto;
+        padding: 20px 10px;
+    }
+
+    .about,
+    .hobby,
+    .skill,
+    .learning,
+    .projects,
+    .certifications,
+    .goals,
+    .subject {
+        width: 100%;
+        margin: 10px 0;
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 17px;
+    }
+
+    p,
+    li {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .about:hover,
+    .subject:hover,
+    .hobby:hover,
+    .skill:hover,
+    .learning:hover,
+    .projects:hover,
+    .certifications:hover,
+    .goals:hover {
+        transform: scale(1.01);
+    }
+}
+
+@media (max-width: 767px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        background-color: rgb(2, 2, 71);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
